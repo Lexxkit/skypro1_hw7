@@ -35,5 +35,16 @@ public class Main {
         System.out.println("Employee's surname is " + lastName);
         System.out.println("Employee's middle name is " + middleName);
 
+        System.out.println("\nTask 6. Capitalize first letters.");
+        fullName = fullName.toLowerCase();
+        System.out.println("Wrong employee's name is + " + fullName);
+
+        char[] chars = fullName.toCharArray();
+        chars[0] = Character.toUpperCase(chars[0]);
+        chars[firstSpace + 1] = Character.toUpperCase(chars[firstSpace + 1]);
+        chars[lastSpace + 1] = Character.toUpperCase(chars[lastSpace + 1]);
+        fullName = String.valueOf(chars);
+        System.out.println("Proper employee's name is " + fullName);
+
     }
 }
