@@ -24,5 +24,16 @@ public class Main {
         fullName = fullName.replace("ё", "е");
         System.out.println("Person's full name is - " + fullName);
 
+        System.out.println("\nTask 5. Split full name.");
+        fullName = "Ivanov Ivan Ivanovich";
+        int firstSpace = fullName.indexOf(" ");
+        int lastSpace = fullName.lastIndexOf(" ");
+        lastName = fullName.substring(0, firstSpace);
+        firstName = fullName.substring(firstSpace + 1, lastSpace);
+        middleName = fullName.substring(lastSpace + 1);
+        System.out.println("Employee's name is " + firstName);
+        System.out.println("Employee's surname is " + lastName);
+        System.out.println("Employee's middle name is " + middleName);
+
     }
 }
