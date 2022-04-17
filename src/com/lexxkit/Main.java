@@ -1,7 +1,5 @@
 package com.lexxkit;
 
-import java.util.Locale;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -46,5 +44,39 @@ public class Main {
         fullName = String.valueOf(chars);
         System.out.println("Proper employee's name is " + fullName);
 
+        //Alternative approach
+        fullName = fullName.toLowerCase();
+        String[] fullNameArray = fullName.split(" ");
+        String fullNameCapitalized = "";
+
+        for (String word :
+                fullNameArray) {
+            fullNameCapitalized = fullNameCapitalized + (word.substring(0, 1).toUpperCase() + word.substring(1)) + " ";
+         }
+        System.out.println("Proper employee's name is " + fullNameCapitalized.trim());
+
+        System.out.println("\nTask 7. Two strings into one.");
+        String firstStr = "135";
+        String secondStr = "246";
+
+        StringBuilder sb = new StringBuilder(secondStr);
+
+        for (int i = 0; i < firstStr.length(); i++) {
+            sb.insert(i*2, firstStr.toCharArray()[i]);
+        }
+        System.out.println(sb);
+
+        System.out.println("\nTask 8. Print duplicated letters.");
+        String initialStr = "aabccddefgghiijjkk";
+
+        char[] initialChars = initialStr.toCharArray();
+        StringBuilder resultStr = new StringBuilder();
+
+        for (int i = 1; i < initialChars.length; i++) {
+            if (initialChars[i - 1] == initialChars[i]) {
+                resultStr.append(initialChars[i]);
+            }
+        }
+        System.out.println(resultStr);
     }
 }
