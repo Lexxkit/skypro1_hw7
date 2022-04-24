@@ -49,8 +49,7 @@ public class Main {
         String[] fullNameArray = fullName.split(" ");
         String fullNameCapitalized = "";
 
-        for (String word :
-                fullNameArray) {
+        for (String word : fullNameArray) {
             fullNameCapitalized = fullNameCapitalized + (word.substring(0, 1).toUpperCase() + word.substring(1)) + " ";
          }
         System.out.println("Proper employee's name is " + fullNameCapitalized.trim());
@@ -77,6 +76,10 @@ public class Main {
                 resultStr.append(initialChars[i]);
             }
         }
-        System.out.println(resultStr);
+        if (resultStr.length() == 0) {
+            System.out.println("There are no duplicate letters in " + initialStr);
+        } else {
+            System.out.println(resultStr);
+        }
     }
 }
